@@ -19,7 +19,8 @@
     "sirv": "^2.0.4",
     "socket.io": "^4.7.4",
     "socket.io-client": "^4.7.4",
-    "vite-plugin-dts": "^3.7.2"
+    "vite-plugin-dts": "^3.7.2",
+    "vite-plugin-vercel": "^4.0.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.8.1",

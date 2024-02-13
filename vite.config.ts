@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import preact from "@preact/preset-vite";
 import path from "path";
+import vercel from "vite-plugin-vercel";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,6 +15,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    vercel(),
     preact({
       reactAliasesEnabled: false,
       babel: {
@@ -28,10 +30,10 @@ export default defineConfig({
     jsxFragment: "Fragment",
   },
   build: {
-    // generate .vite/manifest.json in outDir
-    watch: {
-      include: "src/**",
-    },
+    // // generate .vite/manifest.json in outDir
+    // watch: {
+    //   include: "src/**",
+    // },
     manifest: true,
     rollupOptions: {
       external: ["fsevents", /node:*/],
